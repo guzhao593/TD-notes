@@ -1,15 +1,12 @@
 module.exports = {
+  base: '/TD-notes/',
   dest: 'vuepress',
+  port: '7878',
   locales: {
     '/': {
       lang: 'en-US',
-      title: 'VuePress',
-      description: 'Vue-powered Static Site Generator'
-    },
-    '/zh/': {
-      lang: 'zh-CN',
-      title: 'VuePress',
-      description: 'Vue 驱动的静态网站生成器'
+      title: 'TD-notes',
+      description: '开发笔记'
     }
   },
   head: [
@@ -26,7 +23,7 @@ module.exports = {
   serviceWorker: true,
   theme: 'vue',
   themeConfig: {
-    repo: 'vuejs/vuepress',
+    repo: 'guzhao593/TD-notes',
     editLinks: true,
     docsDir: 'docs',
     // #697 Provided by the official algolia team.
@@ -36,8 +33,6 @@ module.exports = {
     },
     locales: {
       '/': {
-        label: 'English',
-        selectText: 'Languages',
         editLinkText: 'Edit this page on GitHub',
         lastUpdated: 'Last Updated',
         serviceWorker: {
@@ -48,8 +43,15 @@ module.exports = {
         },
         nav: [
           {
-            text: 'Guide',
-            link: '/guide/',
+            text: 'Blog',
+            // link: '/Blog/',
+            items: [
+              {text: 'javascript', link: '/Blog/javascript'},
+              {text: 'vue', link: '/Blog/vue'},
+              {text: 'webpack', link: '/Blog/webpack'},
+              {text: 'css', link: '/Blog/css/'},
+              {text: 'html', link: '/Blog/html'},
+            ]
           },
           {
             text: 'Config Reference',
@@ -65,62 +67,27 @@ module.exports = {
           }
         ],
         sidebar: {
-          '/guide/': genSidebarConfig('Guide')
-        }
-      },
-      '/zh/': {
-        label: '简体中文',
-        selectText: '选择语言',
-        editLinkText: '在 GitHub 上编辑此页',
-        lastUpdated: '上次更新',
-        serviceWorker: {
-          updatePopup: {
-            message: "发现新内容可用",
-            buttonText: "刷新"
-          }
-        },
-        nav: [
-          {
-            text: '指南',
-            link: '/zh/guide/',
-          },
-          {
-            text: '配置',
-            link: '/zh/config/'
-          },
-          {
-            text: '默认主题',
-            link: '/zh/default-theme-config/'
-          },
-          {
-            text: 'Changelog',
-            link: 'https://github.com/vuejs/vuepress/blob/master/CHANGELOG.md'
-          }
-        ],
-        sidebar: {
-          '/zh/guide/': genSidebarConfig('指南')
+          '/Blog/javascript': [
+            {
+              title: 'javascript',
+              collapsable: false,
+              children: [
+                'javascript'
+              ]
+            }
+          ],
+          '/Blog/css/': [
+            {
+              title: 'css',
+              collapsable: false,
+              children: [
+                ''
+              ]
+            }
+          ]
         }
       }
     }
   }
 }
 
-function genSidebarConfig (title) {
-  return [
-    {
-      title,
-      collapsable: false,
-      children: [
-        '',
-        'getting-started',
-        'basic-config',
-        'assets',
-        'markdown',
-        'using-vue',
-        'custom-themes',
-        'i18n',
-        'deploy'
-      ]
-    }
-  ]
-}
