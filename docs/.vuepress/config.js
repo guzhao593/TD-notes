@@ -44,7 +44,6 @@ module.exports = {
         nav: [
           {
             text: 'Blog',
-            // link: '/Blog/',
             items: [
               {text: 'javascript', link: '/Blog/javascript'},
               {text: 'vue', link: '/Blog/vue'},
@@ -54,16 +53,12 @@ module.exports = {
             ]
           },
           {
-            text: 'Config Reference',
+            text: 'project',
             link: '/config/'
           },
           {
-            text: 'Default Theme Config',
+            text: 'profile',
             link: '/default-theme-config/'
-          },
-          {
-            text: 'Changelog',
-            link: 'https://github.com/vuejs/vuepress/blob/master/CHANGELOG.md'
           }
         ],
         sidebar: {
