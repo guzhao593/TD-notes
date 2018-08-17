@@ -43,10 +43,10 @@ module.exports = {
         },
         nav: [
           {
-            text: 'Blog',
+            text: '个人文章',
+            link: '/Blog/',
             items: [
               {text: 'javascript', link: '/Blog/javascript'},
-              {text: 'javascript高级程序设计', link: '/Blog/javascript高级程序设计/'},
               {text: 'vue', link: '/Blog/vue'},
               {text: 'webpack', link: '/Blog/webpack'},
               {text: 'css', link: '/Blog/css/'},
@@ -54,8 +54,15 @@ module.exports = {
             ]
           },
           {
-            text: 'project',
-            link: '/config/'
+            text: '读书笔记',
+            link: '/read/',
+            items: [
+              {text: 'javascript高级程序设计', link: '/read/javascript高级程序设计/'},
+            ]
+          },
+          {
+            text: '个人项目',
+            link: '/project/'
           },
           {
             text: 'profile',
@@ -74,10 +81,10 @@ module.exports = {
             title: 'javascript高级程序设计',
             collapsable: false,
             children: [
-              '/Blog/javascript高级程序设计/第二章：在HTML中使用script标签',
-              '/Blog/javascript高级程序设计/第三章：基本概念',
-              '/Blog/javascript高级程序设计/第四章：变量、作用域和内存问题',
-              '/Blog/javascript高级程序设计/第六章：面向对象的程序设计'
+              '/read/javascript高级程序设计/第二章：在HTML中使用script标签',
+              '/read/javascript高级程序设计/第三章：基本概念',
+              '/read/javascript高级程序设计/第四章：变量、作用域和内存问题',
+              '/read/javascript高级程序设计/第六章：面向对象的程序设计'
             ]
           },
           {
