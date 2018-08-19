@@ -1,3 +1,33 @@
+function getSidebar (title) {
+  const sidebar = {
+    'JavaScriptAdvancedProgramming': [{
+      title: '《JavaScript高级程序设计》',
+      collapsable: false,
+      children: [
+        '第二章：在HTML中使用script标签',
+        '第三章：基本概念',
+        '第四章：变量、作用域和内存问题',
+        '第六章：面向对象的程序设计'
+      ]
+    }],
+    'css': [{
+      title: 'css',
+      collapsable: false,
+      children: [
+        ''
+      ]
+    }],
+    'javascript': [{
+      title: 'javascript',
+      collapsable: false,
+      children: [
+        '',
+        'javascript基础'
+      ]
+    }]
+  }
+  return sidebar[title]
+}
 module.exports = {
   base: '/TD-notes/',
   dest: 'vuepress',
@@ -33,8 +63,8 @@ module.exports = {
     },
     locales: {
       '/': {
-        editLinkText: 'Edit this page on GitHub',
-        lastUpdated: 'Last Updated',
+        editLinkText: '编辑本页',
+        lastUpdated: '最后更新时间',
         serviceWorker: {
           updatePopup: {
             message: "New content is available.",
@@ -43,58 +73,37 @@ module.exports = {
         },
         nav: [
           {
-            text: '个人文章',
+            text: '文章',
             link: '/Blog/',
             items: [
-              {text: 'javascript', link: '/Blog/javascript'},
-              {text: 'vue', link: '/Blog/vue'},
-              {text: 'webpack', link: '/Blog/webpack'},
+              {text: 'javascript', link: '/Blog/javascript/'},
+              {text: 'vue', link: '/Blog/vue/'},
               {text: 'css', link: '/Blog/css/'},
-              {text: 'html', link: '/Blog/html'},
+              {text: 'html', link: '/Blog/html/'},
             ]
           },
           {
-            text: '读书笔记',
+            text: '读书',
             link: '/read/',
             items: [
-              {text: 'javascript高级程序设计', link: '/read/javascript高级程序设计/'},
+              {text: '《JavaScript高级程序设计》', link: '/read/JavaScriptAdvancedProgramming/第二章：在HTML中使用script标签'},
             ]
           },
           {
-            text: '个人项目',
+            text: '项目',
             link: '/project/'
           },
           {
-            text: 'profile',
+            text: '简介',
             link: '/default-theme-config/'
           }
         ],
-        sidebar: [
-          {
-            title: 'javascript',
-            collapsable: false,
-            children: [
-              '/Blog/javascript/README'
-            ]
-          },
-          {
-            title: 'javascript高级程序设计',
-            collapsable: false,
-            children: [
-              '/read/javascript高级程序设计/第二章：在HTML中使用script标签',
-              '/read/javascript高级程序设计/第三章：基本概念',
-              '/read/javascript高级程序设计/第四章：变量、作用域和内存问题',
-              '/read/javascript高级程序设计/第六章：面向对象的程序设计'
-            ]
-          },
-          {
-            title: 'css',
-            collapsable: false,
-            children: [
-              '/Blog/css/README'
-            ]
-          }
-        ]
+        sidebar: {
+          '/Blog/javascript/': getSidebar('javascript'),
+          '/Blog/css/': getSidebar('css'),
+          '/Blog/vue/': getSidebar('vue'),
+          '/read/JavaScriptAdvancedProgramming/': getSidebar('JavaScriptAdvancedProgramming')
+        }
       }
     }
   }

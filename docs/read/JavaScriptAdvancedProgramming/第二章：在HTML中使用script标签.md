@@ -1,7 +1,7 @@
 ---
 sidebar: true
 prev: false
-next: /Blog/javascript高级程序设计/第三章：基本概念
+next: /read/JavaScriptAdvancedProgramming/第三章：基本概念
 ---
 
 # 第二章：在HMTL中使用script标签
