@@ -2,6 +2,7 @@ module.exports = {
   title: 'TD-Notes',
   description: "技术开发笔记",
   base: '/',
+  port: 8899,
   themeConfig: {
     nav: [
       { text: '工程', items: [
