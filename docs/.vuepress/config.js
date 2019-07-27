@@ -24,7 +24,8 @@ module.exports = {
           children: [
             '/gc/webpack/',
             '/gc/webpack/环境变量的设置.md',
-            '/gc/webpack/多页面应用.md'
+            '/gc/webpack/多页面应用.md',
+            '/gc/webpack/Gzip打包.md'
           ]
         },
         {
