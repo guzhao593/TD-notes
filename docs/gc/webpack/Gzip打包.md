@@ -2,7 +2,7 @@
 sidebarDepth: 2
 ---
 
-# 性能优化之Gzip打包
+# 性能优化之Gzip
 
 ## 什么是GZIP ？
 
