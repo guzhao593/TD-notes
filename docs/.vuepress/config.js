@@ -23,8 +23,11 @@ module.exports = {
           collapsable: true,
           children: [
             '/gc/webpack/',
+            '/gc/webpack/module之加载css.md',
             '/gc/webpack/环境变量的设置.md',
             '/gc/webpack/多页面应用.md',
+            '/gc/webpack/网站主题切换.md',
+            '/gc/webpack/DllPlugin提高打包速度.md',
             '/gc/webpack/Gzip打包.md'
           ]
         },
