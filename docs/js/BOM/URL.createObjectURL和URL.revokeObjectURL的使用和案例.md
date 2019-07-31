@@ -1,3 +1,9 @@
+---
+sidebarDepth: 2
+---
+
+
+
 # URL.createObjectURL和URL.revokeObjectURL的使用和案例
 
 ## URL.createObjectURL()
@@ -49,3 +55,62 @@ window.URL.revokeObjectURL(objectURL)
 
 
 >注：通过`URL.createObjectURL()`方法创建的URL对象，在不需要的时候一定要通过`URL.revokeObjectURL()`来释放。
+
+## 案例
+
+### 使用对象URL来显示图片
+
+这个例子使用对象URL来显示图片缩略图。另外，示例也会显示文件名和文件大小等其他文件信息。
+
+HTML
+
+```html
+<input id="fileElem" type="file" multiple accept="image/*" style="display:none" onchange="handleFiles(this.files)"/>
+<a href="#" id="fileSelect">Select some files</a>
+<div id="fileList">
+    <p>No Flies Selected</p>
+</div>
+```
+
+JavaScript
+
+```js
+var fileSelect = document.getElementById("fileSelect"),
+        fileElem = document.getElementById("fileElem"),
+        fileList = document.getElementById("fileList")
+
+fileSelect.addEventListener("click", function (e) {
+    if (fileElem) {
+        fileElem.click()
+    }
+    e.preventDefault()
+}, false)
+
+function handleFiles(files) {
+    if (!files.length) {
+        fileList.innerHTML = "<p>No files selected!</p>"
+    } else {
+        fileList.innerHTML = ""
+        var list = document.createElement("ul")
+        fileList.appendChild(list)
+        for (var i = 0; i < files.length; i++) {
+            var li = document.createElement("li")
+            list.appendChild(li)
+
+            var img = document.createElement("img")
+            img.src = window.URL.createObjectURL(files[i])
+           	// 创建对象URL
+            img.height = 60
+            img.onload = function() {
+                window.URL.revokeObjectURL(this.src)
+                // 图片加载完之后释放对象URL
+            }
+            li.appendChild(img)
+            var info = document.createElement("span")
+            info.innerHTML = files[i].name + ": " + files[i].size + " bytes"
+            li.appendChild(info)
+        }
+    }
+}
+```
+
