@@ -1,4 +1,0 @@
----
-sidebar: true
----
-# git

@@ -11,8 +11,7 @@ module.exports = {
         ] 
       },
       { text: 'js', items: [
-          { text: 'webpack', link: '/js/webpack/' },
-          { text: 'git', link: '/js/git/' },
+          { text: 'BOM', link: '/js/BOM/URL.createObjectURL和URL.revokeObjectURL的使用和案例.md' }
         ] 
       }
     ],
@@ -41,17 +40,10 @@ module.exports = {
       ],
       '/js/': [
         {
-          title: 'base',
+          title: 'BOM',
           collapsable: true,
           children: [
-            '/js/webpack/'
-          ]
-        },
-        {
-          title: 'pro',
-          collapsable: true,
-          children: [
-            '/js/git/'
+            '/js/BOM/URL.createObjectURL和URL.revokeObjectURL的使用和案例.md'
           ]
         }
       ]
