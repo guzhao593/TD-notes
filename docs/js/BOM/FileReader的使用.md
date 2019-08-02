@@ -1,8 +1,8 @@
 # FileReader的使用
 
-FileReader对象允许web应用程序异步读取存储在用户计算机上的文件（或原始数据缓冲区）的内容，使用File或Blob对象指定要读取得文件或数据。
+`FileReader`对象允许`web`应用程序异步读取存储在用户计算机上的文件（或原始数据缓冲区）的内容，使用File或Blob对象指定要读取得文件或数据。
 
-其中File对象可以是来自用户在一个<input>元素上选择文件后返回的FileList对象，也可以是来自拖放操作生成的DataTranfer对象，还可以是来自一个HTMLCanvasElement上执行mozGetAsFile()方法后返回结果。
+其中`File`对象可以是来自用户在一个<input>元素上选择文件后返回的`FileList`对象，也可以是来自拖放操作生成的`DataTranfer`对象，还可以是来自一个`HTMLCanvasElement`上执行`mozGetAsFile`()方法后返回结果。
 
 ## 语法API
 
@@ -10,13 +10,13 @@ FileReader对象允许web应用程序异步读取存储在用户计算机上的�
 
 **FileReader()**
 
-​	返回一个新构造的FileReader实例。
+​	返回一个新构造的`FileReader`实例。
 
 ### 属性
 
 **FileReader.error**  `只读`
 
-​	一个DOMException，表示在读取文件时发生的错误 。
+​	一个`DOMException`，表示在读取文件时发生的错误 。
 
 **FileReader.readyState**  `只读`
 
@@ -36,53 +36,55 @@ FileReader对象允许web应用程序异步读取存储在用户计算机上的�
 
 ### 事件处理
 
-FileReader.onabort
+**FileReader.onabort**
 
-处理abort事件。该事件在读取操作被中断是触发。
+处理`abort`事件。该事件在读取操作被中断是触发。
 
-FileReader.onerror
+**FileReader.onerror**
 
-处理error事件。该事件在读取操作发生错误是触发。
+处理`error`事件。该事件在读取操作发生错误是触发。
 
-FileReader.onload
+**FileReader.onload**
 
-处理load事件。该事件在读取操作完成是触发。
+处理`load`事件。该事件在读取操作完成是触发。
 
-FileFeader.onloadstart
+**FileFeader.onloadstart**
 
-处理loadstart事件。该事件在读取操作开始是触发。
+处理`loadstart`事件。该事件在读取操作开始是触发。
 
-FileReader.onloadend
+**FileReader.onloadend**
 
-处理loadend事件。该事件在读取结束时（要么成功、要么失败）触发。
+处理`loadend`事件。该事件在读取结束时（要么成功、要么失败）触发。
 
-FileReader.onprogress
+**FileReader.onprogress**
 
-处理progress事件。该事件在读取Blob是触发。
+处理`progress`事件。该事件在读取`Blob`是触发。
 
 ### 方法
 
-FileReader.abort()
+**FileReader.abort()**
 
 中断读取操作。
 
-在返回时，readyState属性为DONE。
+在返回时，`readyState`属性为`DONE`。
 
-FileReader.readAsArrayBuffer()
+#### 读取文件内容并输出指定格式
 
-开始读取指定的Blob中的内容，一旦完成，result属性中保存的将是被读取文件的ArrayBuffer数据对象。
+**FileReader.readAsArrayBuffer()**
 
-FileReader.readAsBinaryString()
+开始读取指定的`Blob`中的内容，一旦完成，`result`属性中保存的将是被读取文件的`ArrayBuffer`数据对象。
 
-开始读取指定的Blob中的内容。一旦完成，`result`属性中将包含所读取文件的原始二进制数据。
+**FileReader.readAsBinaryString()**
 
-FileReader.readAsDataURL()
+开始读取指定的`Blob`中的内容。一旦完成，`result`属性中将包含所读取文件的原始二进制数据。
 
-开始读取指定的Blob中的内容。一旦完成，result属性中将包含一个data:URL格式的字符串以表示所读取的文件的内容。
+**FileReader.readAsDataURL()**
 
-FileReader.readerAsText()
+开始读取指定的`Blob`中的内容。一旦完成，result属性中将包含一个`data:URL`格式的字符串以表示所读取的文件的内容。
 
-开始读取指定的Blob中的内容。一旦完成，result属性中将包含一个字符串以表示所读取的文件内容。
+**FileReader.readerAsText()**
+
+开始读取指定的`Blob`中的内容。一旦完成，`result`属性中将包含一个字符串以表示所读取的文件内容。
 
 ## 示例
 
