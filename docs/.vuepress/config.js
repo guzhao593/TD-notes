@@ -13,6 +13,10 @@ module.exports = {
       { text: 'js', items: [
           { text: '文件相关', link: '/js/文件相关/URL.createObjectURL和URL.revokeObjectURL的使用和案例.md' }
         ] 
+      },
+      { text: 'http', items: [
+          { text: 'http', link: '/http/简单的HTTP协议.md' }
+        ] 
       }
     ],
     sidebar: {
@@ -47,6 +51,19 @@ module.exports = {
             '/js/文件相关/FileReader的使用.md',
             '/js/文件相关/File对象的使用和示例.md',
             '/js/文件相关/前端如何实现文件下载.md'
+          ]
+        }
+      ],
+      '/http/': [
+        {
+          title: 'http',
+          collapsable: true,
+          children: [
+            '/http/简单的HTTP协议.md',
+            '/http/HTTP的首部字段.md',
+            '/http/HTTP状态码.md',
+            '/http/网络基础TCPIP.md',
+            '/http/URI与URL.md'
           ]
         }
       ]
