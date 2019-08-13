@@ -48,6 +48,7 @@ module.exports = {
           collapsable: true,
           children: [
             '/js/文件相关/URL.createObjectURL和URL.revokeObjectURL的使用和案例.md',
+            '/js/文件相关/Blob对象.md',
             '/js/文件相关/FileReader的使用.md',
             '/js/文件相关/File对象的使用和示例.md',
             '/js/文件相关/前端如何实现文件下载.md'

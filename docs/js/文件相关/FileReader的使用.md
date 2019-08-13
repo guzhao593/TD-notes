@@ -119,4 +119,3 @@ function handleFile () {
     fileReader.readAsDataURL(fileList[0])
 }
 ```
-
