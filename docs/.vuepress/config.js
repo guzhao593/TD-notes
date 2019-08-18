@@ -11,7 +11,9 @@ module.exports = {
         ] 
       },
       { text: 'js', items: [
-          { text: '文件相关', link: '/js/文件相关/URL.createObjectURL和URL.revokeObjectURL的使用和案例.md' }
+          { text: '数据类型', link: '/js/数据类型/数据类型的转换.md' },
+          { text: '异步操作', link: '/js/异步操作/JavaScript的执行机制.md' },
+          { text: '文件相关', link: '/js/文件相关/URL.createObjectURL和URL.revokeObjectURL的使用和案例.md' },
         ] 
       },
       { text: 'http', items: [
@@ -52,6 +54,20 @@ module.exports = {
             '/js/文件相关/FileReader的使用.md',
             '/js/文件相关/File对象的使用和示例.md',
             '/js/文件相关/前端如何实现文件下载.md'
+          ]
+        },
+        {
+          title: '数据类型',
+          collapsable: true,
+          children: [
+            '/js/数据类型/数据类型的转换.md'
+          ]
+        },
+        {
+          title: '异步操作',
+          collapsable: true,
+          children: [
+            '/js/异步操作/JavaScript的执行机制.md'
           ]
         }
       ],
