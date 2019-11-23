@@ -14,6 +14,7 @@ module.exports = {
           { text: '数据类型', link: '/js/数据类型/数据类型的转换.md' },
           { text: '异步操作', link: '/js/异步操作/JavaScript的执行机制.md' },
           { text: '文件相关', link: '/js/文件相关/URL.createObjectURL和URL.revokeObjectURL的使用和案例.md' },
+          { text: '其他', link: '/js/其他/MutationObserve的使用和应用.md' },
         ] 
       },
       { text: 'http', items: [
@@ -68,6 +69,14 @@ module.exports = {
           collapsable: true,
           children: [
             '/js/异步操作/JavaScript的执行机制.md'
+          ]
+        },
+        {
+          title: '其他',
+          collapsable: true,
+          children: [
+            '/js/其他/MutationObserve的使用和应用.md',
+            '/js/其他/Data URLs.md'
           ]
         }
       ],
